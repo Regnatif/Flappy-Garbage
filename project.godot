@@ -16,9 +16,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Flappy Garbage"
-run/main_scene="res://Scenes/MainScene.tscn"
+run/main_scene="res://Scenes/MenuScene.tscn"
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
+
+[autoload]
+
+Vars="*res://Lol Scripts/Vars.gd"
 
 [input]
 

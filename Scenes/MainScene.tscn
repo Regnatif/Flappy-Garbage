@@ -17,4 +17,11 @@ position = Vector2( 864, 104 )
 [node name="TubeTimer" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true
+
+[node name="ScoreText" type="Label" parent="."]
+margin_right = 175.702
+margin_bottom = 56.127
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="timeout" from="TubeTimer" to="." method="timer"]

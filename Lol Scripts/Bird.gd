@@ -16,13 +16,30 @@ func _ready():
 func _process(delta):
 	velocity.y += gravity * delta
 	position.y += velocity.y * delta
-	if(Input.is_action_just_pressed("jump")):
-		velocity.y -= 500 
+	rotation -= delta * -0.6 
 	
+	if position.y <= 0:
+		position.y = 0
+	if position.y >= 580:
+		position.y = 580
+	
+	if position.y >= 580:
+		get_tree().change_scene("res://Scenes/MenuScene.tscn")
+		Vars.score = 0
+	
+	if(Input.is_action_just_pressed("jump")):
+		rotation = -0.5
+		velocity.y -= 500 
 	pass
 
 
 func _on_Bird_area_entered(area):
 	if area.is_in_group("tube"):
+		get_tree().change_scene("res://Scenes/MenuScene.tscn")
 		queue_free()
+	
+	
+	if area.is_in_group("ScoreDetection"):
+		Vars.score +=1
+		pass
 	pass 

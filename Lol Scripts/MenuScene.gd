@@ -1,4 +1,4 @@
-extends Area2D
+extends Control
 
 
 # Declare member variables here. Examples:
@@ -8,14 +8,16 @@ extends Area2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	position.x = 1072
-	position.y = rand_range(0,300)
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	position.x -= 170 * delta
-	if position.x <= -100:
-		queue_free()
+	get_node("Label2").text = str("YOUR SCORE:", Vars.score)
 	pass
+
+
+func _on_TextureButton_pressed():
+	get_tree().change_scene("res://Scenes/MainScene.tscn")
+	Vars.score = 0
+	pass 
