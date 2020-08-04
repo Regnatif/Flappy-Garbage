@@ -4,25 +4,19 @@ extends Area2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var velocity = Vector2()
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	position.y = 0
-	pass 
+	position.x = 1072
+	position.y = rand_range(0,300)
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	velocity.y += gravity * delta
-	position.y += velocity.y * delta
-	if(Input.is_action_just_pressed("jump")):
-		velocity.y -= 500 
-	
-	pass
-
-
-func _on_Bird_area_entered(area):
-	if area.is_in_group("tube"):
+	position.x -= 170 * delta
+	if position.x <= -100:
+		print("sa")
 		queue_free()
-	pass 
+	pass
