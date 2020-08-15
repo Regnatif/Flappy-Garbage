@@ -19,6 +19,7 @@ func _process(delta):
 	rotation -= delta * -0.6 
 	
 	if position.y <= 0:
+		velocity.y = 0
 		position.y = 0
 	if position.y >= 580:
 		position.y = 580

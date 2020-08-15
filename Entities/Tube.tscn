@@ -4,7 +4,7 @@
 [ext_resource path="res://Lol Scripts/Tube.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 56, 216 )
+extents = Vector2( 56.0807, 216 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 16, 96 )

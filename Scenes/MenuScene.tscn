@@ -1,7 +1,21 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://kisspng-314xelampaposs-profile-5c892a6a7857a6.3926400315524931624929.png" type="Texture" id=1]
 [ext_resource path="res://Lol Scripts/MenuScene.gd" type="Script" id=2]
+[ext_resource path="res://arial.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 251.792, 368.947, 640.435, 441.797 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 37
+font_data = ExtResource( 3 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -12,28 +26,33 @@ __meta__ = {
 }
 
 [node name="TextureButton" type="TextureButton" parent="."]
-margin_left = 328.0
-margin_top = 128.0
-margin_right = 664.0
-margin_bottom = 440.0
-texture_normal = ExtResource( 1 )
+margin_left = 392.0
+margin_top = 264.0
+margin_right = 584.0
+margin_bottom = 408.0
+texture_normal = SubResource( 1 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = 464.0
-margin_top = 192.0
-margin_right = 536.0
-margin_bottom = 264.0
+margin_left = 424.0
+margin_top = 176.0
+margin_right = 576.0
+margin_bottom = 248.0
+custom_fonts/font = SubResource( 2 )
 text = "TIKLA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label2" type="Label" parent="."]
-margin_left = 360.0
-margin_top = 48.0
-margin_right = 624.0
-margin_bottom = 200.0
+margin_left = 48.0
+margin_top = 24.0
+margin_right = 312.0
+margin_bottom = 176.0
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 custom_colors/font_outline_modulate = Color( 0.054902, 0, 1, 1 )
 custom_colors/font_color_shadow = Color( 0.196078, 1, 0, 1 )

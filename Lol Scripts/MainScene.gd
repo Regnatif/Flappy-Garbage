@@ -10,7 +10,7 @@ func _ready():
 
 
 func _process(delta):
-	get_node("ScoreText").text = str(Vars.score)
+	get_node("CanvasLayer/ScoreText").text = str(Vars.score)
 	
 	pass
 
